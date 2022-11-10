@@ -14,12 +14,11 @@ use App\Http\Controllers\PostController;  //外部にあるPostControllerクラ�
 |
 */
 
-//Route::get('/posts', [PostController::class, 'index']);
+//home
+Route::get('/', [PostController::class, 'predict_home']);
 
-Route::get('/', function() {
-    return view('posts/predict');
-});
+//Python model
+Route::get('/posts/python/predict', [PostController::class, 'kuchikomi_csv_download']);
 
-Route::get('/', function() {
-    return view('posts/rule');
-});
+//rule page
+Route::get('/posts/rule', [PostController::class, 'predict_rule']);

@@ -3,21 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-//use宣言は外部にあるクラスをPostController内にインポートできる。
-//この場合、App\Models内のPostクラスをインポートしている。
 use App\Models\Post;
+
+
+use Illuminate\Support\Facades\Storage;
+
+
 
 class PostController extends Controller
 {
-    /**
-     * Post一覧を表示する
-     * 
-     * @param Post Postモデル
-     * @return array Postモデルリスト
-     */
-    public function index(Post $post)//インポートしたPostをインスタンス化して$postとして使用。
+    public function predict_home(Post $post)
     {
-        return $post->get();//$postの中身を戻り値にする。
+        return view('posts/predict');
     }
+    
+    public function predict_rule(Post $post)
+    {
+        return view('posts/rule');
+    }
+    
+    public function kuchikomi_csv_download(Request $request)
+    {
+        $pythonPath =  "/posts/python/predict.py";
+        $command = "python3 " . $pythonPath;
+        exec($command, $outputs);
+        $filePath = '/posts/python/predict.csv';
+        $fileName = 'predict.csv';
+        $mimeType = Storage::mimeType($filePath);
+        $headers = [['Content-Type' => $mimeType]];
+    }
+    
 }
