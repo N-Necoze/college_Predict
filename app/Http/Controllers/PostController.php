@@ -4,11 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
-
-
 use Illuminate\Support\Facades\Storage;
-
-
 
 class PostController extends Controller
 {
@@ -22,6 +18,7 @@ class PostController extends Controller
         return view('posts/rule');
     }
     
+    // python controller
     public function kuchikomi_csv_download(Request $request)
     {
         $pythonPath =  "/posts/python/predict.py";
