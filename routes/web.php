@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;  //外部にあるPostControllerクラスをインポート。
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//home
+Route::get('/', [PostController::class, 'predict_home']);
+
+//Python model
+Route::get('/posts/python/predict', [PostController::class, 'kuchikomi_csv_download']);
+
+//rule page
+Route::get('/posts/rule', [PostController::class, 'predict_rule']);
