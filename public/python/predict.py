@@ -1,5 +1,5 @@
 # *** 予測ロジック ***
-# --- ライブラリ管理 ---
+# --- ライブラリ管理 --- 
 import warnings
 warnings.filterwarnings('ignore')
 import pandas as pd
