@@ -13,22 +13,23 @@ class PostController extends Controller
         return view('posts/predict');
     }
     
+    // python controller
+    public function python(Post $post)
+    {
+        return view('posts/index');
+    }
+    
+    
+    // rull
     public function predict_rule(Post $post)
     {
         return view('posts/rule');
     }
     
-    // python controller
-    public function kuchikomi_csv_download(Request $request)
+    // all predict
+    public function predict_csv(Post $post)
     {
-        $pythonPath =  "/posts/python/predict.py";
-        $command = "python3 " . $pythonPath;
-        exec($command, $outputs);
-        $filePath = '/posts/python/predict.csv';
-        $fileName = 'predict.csv';
-        $mimeType = Storage::mimeType($filePath);
-        $headers = [['Content-Type' => $mimeType]];
-        return view()
+        return view('posts/etcpredict');
     }
     
 }

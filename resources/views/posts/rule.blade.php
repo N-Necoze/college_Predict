@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Predict Numbers - rule</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
-    <div>
+    <div class="background">
         <div class="filter">
             <body>
                 <div class="title">
@@ -23,27 +23,26 @@
                             <p class="text"><br>
                                 ナンバーズ3は、一口200円で購入できます。
                             </p>
-                            
                     </div>
                     <div class="box">
                         <p class='boxtitle'> < 購入方法> </p>
-                            <table class="text">
-                                <tr><!-- 行1（見出し）-->
-                                <th>タイプ</th> <th>当選条件</th>
-                                </tr>
-                                <tr><!-- 行2 -->
-                                <td>ストレート</td> <td>3ケタの各数字と並びの順番が一致</td>
-                                </tr>
-                                <tr><!-- 行3 -->
-                                <td>ボックス</td> <td>3ケタの各数字が一致すれば並びの順序は問わない</td>
-                                </tr>
-                                <tr><!-- 行4 -->
-                                <td>セット</td> <td>ストレートとボックスに半分ずつ申し込み、いずれかが一致</td>
-                                </tr>
-                                <tr><!-- 行5 -->
-                                <td>ミニ</td> <td>下2ケタの数字と並びの順序が一致</td>
-                                </tr>
-                            </table>
+                        <table class="text">
+                            <tr><!-- 行1（見出し）-->
+                            <th>タイプ</th> <th>当選条件</th>
+                            </tr>
+                            <tr><!-- 行2 -->
+                            <td>ストレート</td> <td>3ケタの各数字と並びの順番が一致</td>
+                            </tr>
+                            <tr><!-- 行3 -->
+                            <td>ボックス</td> <td>3ケタの各数字が一致すれば並びの順序は問わない</td>
+                            </tr>
+                            <tr><!-- 行4 -->
+                            <td>セット</td> <td>ストレートとボックスに半分ずつ申し込み、いずれかが一致</td>
+                            </tr>
+                            <tr><!-- 行5 -->
+                            <td>ミニ</td> <td>下2ケタの数字と並びの順序が一致</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="boxes">    
