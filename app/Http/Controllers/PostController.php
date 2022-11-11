@@ -28,6 +28,7 @@ class PostController extends Controller
         $fileName = 'predict.csv';
         $mimeType = Storage::mimeType($filePath);
         $headers = [['Content-Type' => $mimeType]];
+        return view()
     }
     
 }
