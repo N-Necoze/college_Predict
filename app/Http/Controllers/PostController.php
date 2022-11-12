@@ -16,7 +16,15 @@ class PostController extends Controller
     // python controller
     public function python(Post $post)
     {
-        return view('posts/index');
+        return view('posts/pyindex');
+    }
+    
+    public function executePython(Request $request){
+        $path = app_path() . "resources/views/posts/app.py";
+        $command = "python " . $path;
+        exec($command, $output);
+        dd($output);
+        // return view('index', compact('output'));
     }
     
     

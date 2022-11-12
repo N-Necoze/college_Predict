@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;  //外部にあるPostControllerクラスをインポート。
 
-use App\Http\Controllers\TestController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +24,5 @@ Route::get('/posts/rule', [PostController::class, 'predict_rule']);
 Route::get('/posts/etcpredict', [PostController::class, 'predict_csv']);
 
 //python model
-Route::post('/posts/python', [PostController::class, 'python']);
+Route::get('/posts/python', [PostController::class, 'python']);
+Route::post('/python', [PostController::class, 'executePython']);
