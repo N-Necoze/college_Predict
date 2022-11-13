@@ -24,5 +24,4 @@ Route::get('/posts/rule', [PostController::class, 'predict_rule']);
 Route::get('/posts/etcpredict', [PostController::class, 'predict_csv']);
 
 //python model
-Route::get('/posts/python', [PostController::class, 'python']);
 Route::post('/python', [PostController::class, 'executePython']);

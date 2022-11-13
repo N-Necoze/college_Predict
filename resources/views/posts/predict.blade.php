@@ -37,6 +37,10 @@
                         </tr>
                         <?php } ?>
                     </table>
+                    <form action="/python" method="post">
+                        @csrf
+                        <input type="submit" name="submit">
+                    </form>
                 </div>
                 <div class="menu">
                     <p>アプリ説明</p>

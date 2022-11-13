@@ -13,18 +13,12 @@ class PostController extends Controller
         return view('posts/predict');
     }
     
-    // python controller
-    public function python(Post $post)
-    {
-        return view('posts/pyindex');
-    }
-    
     public function executePython(Request $request){
-        $path = app_path() . "resources/views/posts/app.py";
+        //$path = resource_path() . "/views/posts/app.py";
+        $path = resource_path() . "/views/posts/predict_app.py";
         $command = "python " . $path;
         exec($command, $output);
         dd($output);
-        // return view('index', compact('output'));
     }
     
     

@@ -76,3 +76,4 @@ five_ans = ans_pred[0][0:5]
 five_ans.to_csv('./public/csv/five_predict.csv', header=False, encoding='utf_8_sig')
 # 他の出力結果をcsvに保存（オプション）
 ans_pred.to_csv('./public/csv/predict.csv', header=False, encoding='utf_8_sig')
+print('end')
