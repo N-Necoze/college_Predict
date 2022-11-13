@@ -17,8 +17,9 @@ class PostController extends Controller
         //$path = resource_path() . "/views/posts/app.py";
         $path = resource_path() . "/views/posts/predict_app.py";
         $command = "python " . $path;
-        exec($command, $output);
-        dd($output);
+        //exec(export LANG=ja_JP.UTF-8; $command, $output);
+        exec($command, $output, $return_ver);
+        dd($return_ver);
     }
     
     
